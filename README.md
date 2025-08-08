@@ -2,6 +2,10 @@
 
 A modern, responsive website for Vivid Virtual Creations showcasing digital services and creative solutions.
 
+## 🌐 Live Website
+
+**Production URL**: https://vividvirtualcreations-e1rrqqrqu-zac-sheets-projects.vercel.app
+
 ## Features
 
 - **Modern Design**: Clean, professional design with gradient backgrounds and smooth animations
@@ -26,6 +30,7 @@ A modern, responsive website for Vivid Virtual Creations showcasing digital serv
 ├── index.html          # Main HTML file
 ├── styles.css          # CSS styles
 ├── script.js           # JavaScript functionality
+├── vercel.json         # Vercel deployment configuration
 └── README.md          # This file
 ```
 
@@ -35,9 +40,27 @@ A modern, responsive website for Vivid Virtual Creations showcasing digital serv
 2. Open `index.html` in your web browser
 3. The website should load with all functionality working
 
-## Deployment with GitHub CLI
+## Deployment
 
-### Prerequisites
+### Vercel Deployment (Current)
+
+The website is deployed on Vercel for optimal performance and global CDN distribution.
+
+**Deployment Commands:**
+```bash
+# Deploy to Vercel
+vercel --prod
+
+# List deployments
+vercel ls
+
+# View deployment details
+vercel inspect
+```
+
+### GitHub Pages Deployment (Alternative)
+
+#### Prerequisites
 
 1. Install GitHub CLI if you haven't already:
    ```bash
@@ -52,7 +75,7 @@ A modern, responsive website for Vivid Virtual Creations showcasing digital serv
    gh auth login
    ```
 
-### Deployment Steps
+#### Deployment Steps
 
 1. **Initialize Git Repository** (if not already done):
    ```bash
@@ -83,10 +106,18 @@ A modern, responsive website for Vivid Virtual Creations showcasing digital serv
    https://[your-username].github.io/vividvirtualcreations
    ```
 
-### Alternative: Deploy to GitHub Pages with Custom Domain
+### Custom Domain Setup
 
 If you own the domain `vividvirtualcreations.com`:
 
+#### For Vercel:
+1. Go to your Vercel dashboard
+2. Select the project
+3. Go to Settings > Domains
+4. Add your custom domain: `vividvirtualcreations.com`
+5. Configure DNS records as instructed by Vercel
+
+#### For GitHub Pages:
 1. **Add Custom Domain**:
    - In your repository Settings > Pages
    - Add your custom domain: `vividvirtualcreations.com`
@@ -137,6 +168,7 @@ The website is optimized for performance with:
 - Optimized CSS and JavaScript
 - Responsive images and icons
 - Smooth animations using CSS transforms
+- Global CDN distribution via Vercel
 
 ## License
 
