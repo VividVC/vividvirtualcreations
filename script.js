@@ -31,10 +31,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
     if (window.scrollY > 100) {
-        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+        navbar.style.background = '#0f1226';
+        navbar.style.boxShadow = 'none';
     } else {
-        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+        navbar.style.background = '#0f1226';
         navbar.style.boxShadow = 'none';
     }
 });
@@ -227,8 +227,8 @@ function createScrollProgress() {
         top: 0;
         left: 0;
         width: 0%;
-        height: 3px;
-        background: linear-gradient(45deg, #f093fb 0%, #f5576c 100%);
+        height: 4px;
+        background: #ffd700;
         z-index: 1001;
         transition: width 0.1s ease;
     `;
@@ -251,18 +251,19 @@ function createBackToTop() {
         position: fixed;
         bottom: 30px;
         right: 30px;
-        width: 50px;
-        height: 50px;
-        background: linear-gradient(45deg, #f093fb 0%, #f5576c 100%);
-        color: white;
-        border: none;
-        border-radius: 50%;
+        width: 56px;
+        height: 56px;
+        background: #ffd700;
+        color: #000;
+        border: 4px solid #000;
+        border-radius: 0;
         cursor: pointer;
         opacity: 0;
         visibility: hidden;
-        transition: all 0.3s ease;
+        transition: all 0.2s steps(4, end);
         z-index: 1000;
         font-size: 1.2rem;
+        box-shadow: 6px 6px 0 #000;
     `;
     
     document.body.appendChild(backToTop);
